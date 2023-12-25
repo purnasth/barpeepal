@@ -1,9 +1,17 @@
+@font-face {
+  font-family: "Lucida";
+  src: url("./fonts/Lucida Bright Regular.ttf");
+
+  font-family: "Roxborough CF";
+  src: url("./fonts/Roxborough CF.ttf");
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer components {
   body {
-    @apply bg-gray-100 text-gray-900;
+    @apply bg-gray-100 text-gray-900 font-roxborough;
   }
 }

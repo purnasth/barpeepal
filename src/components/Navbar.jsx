@@ -4,7 +4,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
 
 const navigationItems = [
-  { label: "Home", link: "/" },
+  { label: "Home", link: "/home" },
   { label: "About Us", link: "/about" },
   {
     label: "Rooms",
@@ -15,12 +15,17 @@ const navigationItems = [
     ],
   },
   { label: "Restaurant & Bar", link: "/restaurant-bar" },
-  { label: "Facilities", link: "/facilities" },
+  { label: "Services", link: "/services" },
   { label: "Meeting & Events", link: "/events" },
   { label: "Recreation", link: "/recreation" },
   { label: "Gallery", link: "/gallery" },
   { label: "Contact Us", link: "/contact" },
 ];
+
+// Helper function to check if a given link is active
+const isActive = (link) => {
+  return location.pathname.includes(link);
+};
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -144,11 +149,11 @@ const Navbar = () => {
             <img
               src="https://www.barpeepalresort.com/images/preference/3aIeR-bar-peepal-logo.png"
               alt="Bar Peepal Resort Logo"
-              className="w-28 h-20 lg:w-40 lg:h-28 object-contain drop-shadow-lg bg-white rounded-lg"
+              className="w-28 h-20 lg:w-40 lg:h-24 object-contain drop-shadow-lg bg-white rounded-lg"
             />
           </Link>
           <svg
-            className="w-8 h-8 mr-5"
+            className="w-8 h-8 mr-5 cursor-pointer"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -168,10 +173,10 @@ const Navbar = () => {
             <li key={index}>
               {item.subItems ? (
                 <div
-                  className={`flex items-center justify-between text-white p-4 text-base md:text-lg transition-all duration-300 ${
-                    isRoomsOpen ? "" : ""
-                  } ${
-                    location.pathname.includes(item.link) ? "bg-red-500" : ""
+                  className={`flex items-center justify-between text-white px-4 py-3 my-2 text-base md:text-lg transition-all duration-300 cursor-pointer hover:bg-white hover:text-dark-primary rounded-xl ${
+                    isActive(item.link)
+                      ? "bg-white text-dark-primary rounded-xl"
+                      : ""
                   }`}
                   onClick={toggleRooms}
                 >
@@ -185,19 +190,22 @@ const Navbar = () => {
               ) : (
                 <Link
                   to={item.link}
-                  className={`text-white block p-4 text-base md:text-lg transition-all duration-200 ${
-                    location.pathname === item.link
-                      ? "bg-white text-primary rounded-xl"
-                      : ""
+                  className={`block px-4 py-3 my-2 text-base md:text-lg transition-all duration-200 hover:bg-white hover:text-dark-primary rounded-xl  ${
+                    isActive(item.link)
+                      ? "bg-white text-dark-primary rounded-xl"
+                      : "text-white"
                   }`}
-                  onClick={closeNav}
+                  onClick={() => {
+                    closeNav();
+                    closeRooms(); // Close the rooms dropdown when a link is clicked
+                  }}
                 >
                   {item.label}
                 </Link>
               )}
               {item.subItems && isRoomsOpen && (
                 <ul
-                  className={`ml-6 text-white block p-4 py-0 ${
+                  className={`ml-2 text-white block px-4 py-0 my-2 ${
                     isRoomsOpen ? "-translate-y-0" : "-translate-y-full"
                   }`}
                 >
@@ -205,10 +213,15 @@ const Navbar = () => {
                     <li key={subIndex}>
                       <Link
                         to={subItem.link}
-                        className={`text-white block p-2 text-base md:text-lg ${
-                          location.pathname === subItem.link ? "bg-red-500" : ""
+                        className={`block px-4 py-3 my-1 text-base md:text-lg hover:bg-white hover:text-dark-primary rounded-xl ${
+                          isActive(subItem.link)
+                            ? "bg-white text-dark-primary rounded-xl"
+                            : "text-white"
                         }`}
-                        onClick={closeRooms}
+                        onClick={() => {
+                          closeNav();
+                          closeRooms(); // Close the rooms dropdown when a link is clicked
+                        }}
                       >
                         {subItem.label}
                       </Link>
