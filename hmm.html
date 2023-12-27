@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #1e1c27;
+        color: #fff;
+        font-family: "Geologica", sans-serif;
+      }
+
+      h1 {
+        font-size: 3em;
+      }
+      h1 > span {
+        position: relative;
+        display: inline-block;
+        color: #ff3c41;
+        height: 1.25em;
+        vertical-align: bottom;
+        overflow: hidden;
+      }
+      h1 > span > span {
+        display: block;
+        animation: animateWords 5s infinite ease;
+      }
+
+      @keyframes animateWords {
+        0% {
+          transform: translateY(0%);
+        }
+        25% {
+          transform: translateY(-100%);
+        }
+        50% {
+          transform: translateY(-200%);
+        }
+        75% {
+          transform: translateY(-300%);
+        }
+        100% {
+          transform: translateY(-400%);
+        }
+      }
+
+      h2 {
+        font-size: 2em;
+        background: right / 0% 100% no-repeat linear-gradient(#c1f5ee, #c1f5ee);
+        transition: background-size 400ms;
+      }
+      h2:hover {
+        color: #1e1c27;
+        background: left / 100% 100% no-repeat linear-gradient(#c1f5ee, #c1f5ee);
+      }
+      .contain-text {
+        width: 200px;
+        height: 100px;
+        background-color: red;
+      }
+      .some-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Never gonna
+      <span>
+        <span>give you up</span>
+        <span>let you down</span>
+        <span>turn around</span>
+        <span>and hurt you</span>
+        <span>give you up</span>
+      </span>
+    </h1>
+
+    <h2>Hello, World</h2>
+
+    <div class="contain-text">
+      <p class="some-text">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+        molestias dignissimos aperiam consequatur veritatis. Ratione harum, cum
+        suscipit rerum necessitatibus qui ipsa fugiat, praesentium sequi, atque
+        esse veniam maiores odio molestias. Ipsum magnam facilis delectus
+        officia dignissimos earum error id. Voluptatibus quia tempore magni
+        officiis est odit repudiandae quam et distinctio corporis esse harum,
+        beatae mollitia? Nam dolorum tempora deserunt, laudantium sequi dolorem
+        excepturi quis ratione error unde quaerat voluptas aut sit porro
+        repellendus id? Eligendi cupiditate earum, sed voluptate unde voluptatum
+        nisi reiciendis dolorum rem inventore veniam, perferendis ea tenetur
+        corporis culpa nobis fuga maxime maiores? Aperiam, in quis!
+      </p>
+    </div>
+
+    <script>
+      function flashTitleNotification() {
+        var originTitle = document.title;
+        var isFlash = false;
+
+        function changeTitle() {
+          document.title = isFlash ? "Hello!!!" : originTitle;
+          isFlash = !isFlash;
+        }
+        setInterval(changeTitle, 1000);
+      }
+      window.onload = flashTitleNotification;
+    </script>
+  </body>
+</html>

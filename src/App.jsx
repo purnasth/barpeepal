@@ -9,6 +9,7 @@ import {
 import Navbar from "./components/Navbar";
 import Services from "./components/Services";
 import Home from "./components/Home";
+import About from "./components/About";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<Home />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );

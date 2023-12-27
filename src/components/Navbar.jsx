@@ -64,11 +64,16 @@ const Navbar = () => {
   }, []);
 
   const gradientStyle = {
-    background: "radial-gradient(at center bottom, #ffffff, #454723)",
+    background:
+      "radial-gradient(at center bottom, rgba(255,255,255,1), rgba(69, 71, 35, 1))",
+    // background: "rgba(0, 0, 0, 0.2)",
+    backdropFilter: "blur(5px)",
   };
 
   return (
-    <nav className={`fixed top-0 w-full transition-all z-50 `}>
+    <nav
+      className={`fixed top-0 w-full transition-all z-50 bg-gradient-to-t from-[rgba(0,0,0,0)] via-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0.8)]`}
+    >
       <div
         className={`flex items-center justify-between px-4 z-[99] transition-all duration-300 h-20 ${
           isSticky ? "gradient-background" : "bg-transparent"
@@ -124,7 +129,7 @@ const Navbar = () => {
 
         <button
           className={`px-4 md:px-6 py-2 bg-transparent my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out hover:scale-100 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#454722] before:to-[#696935] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff] text-xl lg:text-lg ${
-            isSticky ? "scale-90" : ""
+            isSticky ? "scale-90 hidden md:flex" : ""
           }`}
         >
           Book

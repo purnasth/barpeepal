@@ -14,4 +14,10 @@
   body {
     @apply bg-gray-100 text-gray-900 font-roxborough;
   }
+  /* .overlay {
+    @apply bg-gradient-to-t from-[rgba(0,0,0,0)] via-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.8)] absolute inset-0 w-full h-1/2 lg:h-screen;
+  } */
+  /* .overlay {
+    @apply bg-gradient-to-t from-[rgba(0,0,0,0.5)] via-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.8)] fixed inset-0 w-full h-screen;
+  } */
 }
