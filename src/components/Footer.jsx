@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import spring from "../assets/graphics/spring_tree.png";
 import forest from "../assets/graphics/forest.png";
+import hills from "../assets/graphics/hills.png";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaPhoneAlt, FaFacebook, FaHeart } from "react-icons/fa";
 import { IoIosMailUnread } from "react-icons/io";
@@ -112,6 +113,10 @@ const Footer = () => {
 
   const forestTreeStyle = {
     backgroundImage: `url(${forest})`,
+  };
+
+  const hillsTreeStyle = {
+    backgroundImage: `url(${hills})`,
   };
 
   return (
@@ -228,15 +233,19 @@ const Footer = () => {
         </div>
       </div>
 
-      <img
-        className="absolute inset-0 w-full h-full object-fill opacity-10 z-[-1]"
-        style={forestTreeStyle}
-      />
-
+      {/* <div
+        className="absolute bottom-0 left-0 w-full h-96 bg-cover bg-center bg-no-repeat opacity-20"
+        style={hillsTreeStyle}
+      ></div> */}
       <div
+        className="absolute bottom-0 left-0 w-full h-40 bg-contain bg-repeat-x opacity-20"
+        style={forestTreeStyle}
+      ></div>
+
+      {/* <div
         className="absolute -bottom-10 right-1/2 translate-x-1/2 w-80 h-96 bg-contain bg-no-repeat opacity-20"
         style={springTreeStyle}
-      ></div>
+      ></div> */}
     </footer>
   );
 };

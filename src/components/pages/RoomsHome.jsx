@@ -50,6 +50,8 @@ const rooms = [
 const RoomSection = () => {
   const settings = {
     // dots: true,
+    arrows: false,
+    autoplay: true,
     infinite: true,
     speed: 500,
     slidesToScroll: 1,
@@ -77,7 +79,7 @@ const RoomSection = () => {
           {rooms.map((room) => (
             <div
               key={room.id}
-              className="p-4 transition duration-300 ease-in-out transform hover:scale-105"
+              className="p-0 md:p-4 transition duration-300 ease-in-out transform hover:scale-105"
             >
               <div className="h-64 relative overflow-hidden rounded-lg">
                 <AnimatedImg
@@ -90,7 +92,7 @@ const RoomSection = () => {
               <div className="ml-2 mt-4">
                 <Link
                   to="/"
-                  className="flex items-center justify-start text-base md:text-2xl font-bold mb-2 text-white gap-2"
+                  className="flex items-center justify-start text-xl md:text-2xl font-bold mb-2 text-white gap-2"
                 >
                   Explore
                   <HiArrowLongRight />

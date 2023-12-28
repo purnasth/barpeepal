@@ -78,7 +78,7 @@ const Services = () => {
                   className="w-full h-80 object-cover"
                 />
               </div>
-              <div className="absolute bottom-0 p-6 h-28 hover:h-full transition-all duration-500 ease-in-out overflow-hidden text-white bg-gradient-to-b from-[rgba(0,0,0,0)] via-[rgba(0,0,0,0.5)] to-[rgba(0,0,0,0.75)] overflow-y-auto">
+              <div className="scroller absolute bottom-0 p-6 h-28 hover:h-full transition-all duration-500 ease-in-out overflow-hidden text-white bg-gradient-to-b from-[rgba(0,0,0,0)] via-[rgba(0,0,0,0.65)] to-[rgba(0,0,0,0.90)] overflow-y-auto">
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-white">{service.description}</p>
                 <p>

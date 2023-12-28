@@ -21,7 +21,10 @@ const Testimonials = () => {
   };
 
   const settings = {
+    // dots: true,
     infinite: true,
+    arrows: false,
+    autoplay: true,
     speed: 500,
     slidesToScroll: 1,
     slidesToShow: 2,
@@ -39,10 +42,10 @@ const Testimonials = () => {
     <section className="relative p-4 z-20 overflow-hidden bg-gradient-to-b from-gray-100 via-[#696935] to-[#454722]">
       <div className="container mx-auto md:p-20">
         <h2 className="font-bold text-center  text-dark-primary text-[2rem] md:text-[3rem]">
-          Our Services
+          Testimonials
         </h2>
         <p className="text-md lg:text-xl mb-12 text-center text-dark-primary">
-          Where hospitality meets excellence in every detail
+          See why they love their unforgettable stays with us!
         </p>
         <Slider {...settings}>
           {testimonialData.map((testimonial, index) => (
@@ -78,7 +81,7 @@ const Testimonials = () => {
             onClick={closeModal}
           >
             <div
-              className="bg-white p-8 rounded-md w-[90%] md:w-[50%] max-h-[70%] z-40 overflow-y-auto relative"
+              className="bg-gray-100 p-8 rounded-md w-[90%] md:w-[50%] max-h-[70%] z-40 overflow-y-auto relative"
               onClick={stopPropagation}
             >
               <button

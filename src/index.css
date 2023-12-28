@@ -11,6 +11,39 @@
 @tailwind utilities;
 
 @layer components {
+  ::selection {
+    @apply bg-light-primary text-gray-100;
+  }
+
+  ::-moz-selection {
+    @apply bg-light-primary text-gray-100;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-2 bg-transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-light-primary;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .scroller::-webkit-scrollbar {
+    @apply w-2 bg-transparent;
+  }
+  .scroller::-webkit-scrollbar-thumb {
+    @apply w-2 bg-gray-100;
+  }
+  .scroller::-webkit-scrollbar-thumb:hover {
+    @apply w-2 bg-light-primary;
+  }
+
   body {
     @apply bg-gray-100 text-gray-900 font-roxborough;
   }
