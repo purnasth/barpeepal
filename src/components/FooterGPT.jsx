@@ -58,6 +58,45 @@ const socialMediaDetails = [
   },
 ];
 
+const OTAData = [
+  {
+    id: 1,
+    title: "Booking.com",
+    image: booking,
+    customClassName: "w-32 h-8 object-contain",
+  },
+  {
+    id: 2,
+    title: "Tripadvisor",
+    image: tripadvisor,
+    customClassName: "w-32 h-8 object-contain",
+  },
+  {
+    id: 3,
+    title: "MakeMyTrip",
+    image: makemytrip,
+    customClassName: "w-32 h-8 object-contain",
+  },
+  {
+    id: 4,
+    title: "Agoda",
+    image: agoda,
+    customClassName: "w-40 h-12 object-cover scale-75 md:scale-75",
+  },
+  {
+    id: 5,
+    title: "Expedia",
+    image: expedia,
+    customClassName: "w-32 h-8 object-contain",
+  },
+  {
+    id: 6,
+    title: "Trivago",
+    image: trivago,
+    customClassName: "w-32 h-8 object-contain",
+  },
+];
+
 const currentYear = new Date().getFullYear();
 
 const Footer = () => {
@@ -122,90 +161,24 @@ const Footer = () => {
               />
             </Link>
           </div>
-
           <div className="grid w-full justify-items-center z-20">
             <h5 className="text-2xl mb-4 md:mb-0 underline">OTA</h5>
-            <ul className="grid grid-cols-3 justify-items-center gap-4">
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="Booking.com"
-                    src={booking}
-                    alt="Booking.com"
-                    className="w-32 h-8 object-contain"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="Tripadvisor"
-                    src={tripadvisor}
-                    alt="Tripadvisor"
-                    className="w-32 h-8 object-contain"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="MakeMyTrip"
-                    src={makemytrip}
-                    alt="MakeMyTrip"
-                    className="w-32 h-8 object-contain"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="Agoda"
-                    src={agoda}
-                    alt="Agoda"
-                    className="w-32 h-8 object-cover scale-75 md:scale-75"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="Expedia"
-                    src={expedia}
-                    alt="Expedia"
-                    className="w-32 h-8 object-cover"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="Trivago"
-                    src={trivago}
-                    alt="Trivago"
-                    className="w-32 h-8 object-contain"
-                  />
-                </Link>
-              </li>
+            <ul className="grid grid-cols-3 lg:grid-cols-2 justify-items-center gap-4">
+              {OTAData.map((otaItem) => (
+                <li key={otaItem.id}>
+                  <Link
+                    to="/"
+                    className={`p-2 flex items-center justify-center rounded-xl bg-white text-white ${otaItem.customClassName}`}
+                  >
+                    <img
+                      title={otaItem.title}
+                      src={otaItem.image}
+                      alt={otaItem.title}
+                    />
+                  </Link>
+                </li>
+              ))}
             </ul>
-            <h6>We accept VISA</h6>
           </div>
         </div>
 
