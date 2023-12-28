@@ -217,9 +217,14 @@ const Footer = () => {
           <p className="text-center">
             Copyright © Bar Peepal Resort {currentYear}. All rights reserved.
           </p>
-          <Link to="/" className="underline">
-            Terms & Conditions
-          </Link>
+          <div className="flex gap-4">
+            <Link to="/" className="underline">
+              Terms & Conditions
+            </Link>
+            <Link to="/" className="underline">
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
 

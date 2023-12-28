@@ -36,13 +36,19 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative p-4 z-20 overflow-hidden">
+    <section className="relative p-4 z-20 overflow-hidden bg-gradient-to-b from-gray-100 via-[#696935] to-[#454722]">
       <div className="container mx-auto md:p-20">
+        <h2 className="font-bold text-center  text-dark-primary text-[2rem] md:text-[3rem]">
+          Our Services
+        </h2>
+        <p className="text-md lg:text-xl mb-12 text-center text-dark-primary">
+          Where hospitality meets excellence in every detail
+        </p>
         <Slider {...settings}>
           {testimonialData.map((testimonial, index) => (
             <div
               key={index}
-              className="flex items-center gap-8 relative p-8 my-8 shadow-lg hover:shadow-xl transition-all duration-150 ease-linear max-h-80 overflow-y-auto cursor-pointer"
+              className="flex items-center gap-8 relative p-8 my-8 shadow-lg hover:shadow-xl transition-all duration-150 ease-linear max-h-80 overflow-y-auto cursor-pointer "
               onDoubleClick={() => openModal(testimonial)}
             >
               <div className="w-full flex items-center justify-between">

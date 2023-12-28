@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { HiArrowLongRight } from "react-icons/hi2";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
 
@@ -133,7 +133,7 @@ const Navbar = () => {
           }`}
         >
           Book
-          <FaArrowRight className="ml-2 hidden lg:block" />
+          <HiArrowLongRight className="text-2xl ml-2 hidden lg:block" />
         </button>
       </div>
 
