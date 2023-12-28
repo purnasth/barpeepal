@@ -128,7 +128,7 @@ const Navbar = () => {
         </Link>
 
         <button
-          className={`px-4 md:px-6 py-2 bg-transparent my-3 flex items-center justify-center rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out hover:scale-100 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#454722] before:to-[#696935] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff] text-xl lg:text-lg ${
+          className={`px-4 md:px-6 py-2 bg-transparent my-3 flex items-center justify-center cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out hover:scale-100 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#454722] before:to-[#696935] before:transition-all before:duration-500 before:ease-in-out before:z-[-1]  hover:before:left-0 text-[#fff] text-xl lg:text-lg ${
             isSticky ? "scale-90 hidden md:flex" : ""
           }`}
         >

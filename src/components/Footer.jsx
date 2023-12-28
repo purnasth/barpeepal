@@ -6,12 +6,6 @@ import { IoLocationSharp } from "react-icons/io5";
 import { FaPhoneAlt, FaFacebook, FaHeart } from "react-icons/fa";
 import { IoIosMailUnread } from "react-icons/io";
 import { BsInstagram } from "react-icons/bs";
-import booking from "../assets/OTA/bookingcom.svg";
-import tripadvisor from "../assets/OTA/tripadvisor.svg";
-import makemytrip from "../assets/OTA/makemytrip.svg";
-import agoda from "../assets/OTA/agoda.svg";
-import trivago from "../assets/OTA/trivago.svg";
-import expedia from "../assets/OTA/expedia.svg";
 
 const contactDetails = [
   {
@@ -56,6 +50,57 @@ const socialMediaDetails = [
     ),
     link: "https://www.barpeepalresort.com",
   },
+];
+
+const otaLinks = [
+  {
+    id: 1,
+    name: "Booking.com",
+    image: "src/assets/OTA/bookingcom.svg",
+    link: "https://www.booking.com/hotel/np/bar-peepal-resort.en-gb.html",
+  },
+  {
+    id: 2,
+    name: "Tripadvisor",
+    image: "src/assets/OTA/tripadvisor.svg",
+    link: "https://www.tripadvisor.com/Hotel_Review-g293891-d21025792-Reviews-Bar_Peepal_Resort-Pokhara_Gandaki_Zone_Western_Region.html",
+  },
+  {
+    id: 3,
+    name: "MakeMyTrip",
+    image: "src/assets/OTA/makemytrip.svg",
+    link: "https://www.makemytrip.com/hotels-international/nepal/pokhara-hotels/bar_peepal_resort-details.html",
+  },
+
+  {
+    id: 4,
+    name: "Agoda",
+    image: "src/assets/OTA/agoda.svg",
+    link: "https://www.agoda.com/bar-peepal-resort/hotel/pokhara-np.html",
+    customClass: "w-32 h-8 object-cover scale-75 md:scale-75",
+  },
+
+  {
+    id: 5,
+    name: "Expedia",
+    image: "src/assets/OTA/expedia.svg",
+    link: "https://www.expedia.com/Pokhara-Hotels-Bar-Peepal-Resort.h66466180.Hotel-Information",
+    customClass: "object-cover",
+  },
+
+  {
+    id: 6,
+    name: "Trivago",
+    image: "src/assets/OTA/trivago.svg",
+    link: "https://www.trivago.com/pokhara-101736/hotel/bar-peepal-resort-10325146",
+  },
+];
+
+const paymentMethods = [
+  { id: 1, name: "Visa", image: "src/assets/visa/visa.png" },
+  { id: 2, name: "MasterCard", image: "src/assets/visa/mastercard.png" },
+  { id: 3, name: "American Express", image: "src/assets/visa/amex.png" },
+  { id: 4, name: "Union", image: "src/assets/visa/union.png" },
 ];
 
 const currentYear = new Date().getFullYear();
@@ -125,87 +170,44 @@ const Footer = () => {
 
           <div className="grid w-full justify-items-center z-20">
             <h5 className="text-2xl mb-4 md:mb-0 underline">OTA</h5>
-            <ul className="grid grid-cols-3 justify-items-center gap-4">
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="Booking.com"
-                    src={booking}
-                    alt="Booking.com"
-                    className="w-32 h-8 object-contain"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="Tripadvisor"
-                    src={tripadvisor}
-                    alt="Tripadvisor"
-                    className="w-32 h-8 object-contain"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="MakeMyTrip"
-                    src={makemytrip}
-                    alt="MakeMyTrip"
-                    className="w-32 h-8 object-contain"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="Agoda"
-                    src={agoda}
-                    alt="Agoda"
-                    className="w-32 h-8 object-cover scale-75 md:scale-75"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="Expedia"
-                    src={expedia}
-                    alt="Expedia"
-                    className="w-32 h-8 object-cover"
-                  />
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/"
-                  className="p-2 flex items-center justify-center bg-white rounded-xl"
-                >
-                  <img
-                    title="Trivago"
-                    src={trivago}
-                    alt="Trivago"
-                    className="w-32 h-8 object-contain"
-                  />
-                </Link>
-              </li>
+
+            <ul className="grid grid-cols-3 gap-4 w-full">
+              {otaLinks.map((ota) => (
+                <li key={ota.id}>
+                  <Link
+                    to={ota.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 flex items-center justify-center bg-white rounded-xl"
+                  >
+                    <img
+                      src={`${import.meta.env.BASE_URL}${ota.image}`}
+                      className={`w-32 h-8 object-contain ${ota.customClass}`}
+                      alt={ota.name}
+                    />
+                  </Link>
+                </li>
+              ))}
             </ul>
-            <h6>We accept VISA</h6>
+
+            <div className="flex items-center justify-between gap-4 mt-5 md:mt-0">
+              <h5 className="text-xs md:text-base uppercase font-bold">
+                We accept
+              </h5>
+              <ul className="flex items-center justify-between gap-4">
+                {paymentMethods.map((method) => (
+                  <li key={method.id}>
+                    {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
+                    <img
+                      src={`${import.meta.env.BASE_URL}${method.image}`}
+                      className="w-12 h-auto object-contain"
+                      alt={method.name}
+                    />
+                    {/* </a> */}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -227,7 +229,7 @@ const Footer = () => {
       />
 
       <div
-        className="absolute -bottom-10 right-1/2 translate-x-1/2 w-64 h-80 bg-contain bg-no-repeat opacity-20"
+        className="absolute -bottom-10 right-1/2 translate-x-1/2 w-80 h-96 bg-contain bg-no-repeat opacity-20"
         style={springTreeStyle}
       ></div>
     </footer>
