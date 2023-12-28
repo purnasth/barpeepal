@@ -43,7 +43,7 @@ const Testimonials = () => {
             <div
               key={index}
               className="flex items-center gap-8 relative p-8 my-8 shadow-lg hover:shadow-xl transition-all duration-150 ease-linear max-h-80 overflow-y-auto cursor-pointer"
-              onClick={() => openModal(testimonial)}
+              onDoubleClick={() => openModal(testimonial)}
             >
               <div className="w-full flex items-center justify-between">
                 <img
