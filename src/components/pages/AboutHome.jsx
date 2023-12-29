@@ -43,7 +43,7 @@ const AboutHome = () => {
           </div>
         </div>
         <div
-          className="w-full h-24 md:h-40 bg-contain bg-repeat-x opacity-90"
+          className="w-full h-24 md:h-40 bg-contain bg-repeat-x opacity-20"
           style={tree}
         ></div>
       </div>

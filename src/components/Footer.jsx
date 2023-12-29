@@ -174,7 +174,7 @@ const Footer = () => {
           </div>
 
           <div className="grid w-full justify-items-center z-20">
-            <h5 className="text-2xl mb-4 md:mb-0 underline">OTA</h5>
+            <h5 className="text-2xl mb-4 md:mb-0 underline">Book Online</h5>
 
             <ul className="grid grid-cols-3 gap-4 w-full">
               {otaLinks.map((ota) => (
@@ -238,7 +238,7 @@ const Footer = () => {
         style={hillsTreeStyle}
       ></div> */}
       <div
-        className="absolute bottom-0 left-0 w-full h-40 bg-contain bg-repeat-x opacity-20"
+        className="absolute bottom-0 left-0 w-full h-40 bg-contain bg-repeat-x opacity-10"
         style={forestTreeStyle}
       ></div>
 

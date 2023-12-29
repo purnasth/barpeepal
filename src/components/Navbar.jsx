@@ -64,10 +64,10 @@ const Navbar = () => {
   }, []);
 
   const gradientStyle = {
-    background:
-      "radial-gradient(at center bottom, rgba(255,255,255,1), rgba(69, 71, 35, 1))",
+    // background:
+    // "radial-gradient(at center bottom, rgba(255,255,255,1), rgba(69, 71, 35, 1))",
     // background: "rgba(0, 0, 0, 0.2)",
-    backdropFilter: "blur(5px)",
+    backdropFilter: "blur(4px)",
   };
 
   return (

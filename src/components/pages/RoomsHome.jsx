@@ -55,7 +55,7 @@ const RoomSection = () => {
     infinite: true,
     speed: 500,
     slidesToScroll: 1,
-    slidesToShow: 2.5,
+    slidesToShow: 2.65,
     responsive: [
       {
         breakpoint: 768,
