@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import logo from "../../public/logo.svg";
+import logoWhite from "../../public/logo_white.svg";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
@@ -32,6 +34,8 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isRoomsOpen, setIsRoomsOpen] = useState(false);
   const location = useLocation();
+
+  const logoToRender = isSticky ? logo : logoWhite;
 
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
@@ -119,9 +123,12 @@ const Navbar = () => {
           className={`text-white font-bold transition-all duration-300 ${
             isSticky ? "scale-100 md:scale-[0.65]" : "bg-transparent mt-10"
           }`}
+          style={{
+            mixBlendMode: isSticky ? "normal" : "difference", // Use 'difference' when background is transparent
+          }}
         >
           <img
-            src="https://www.barpeepalresort.com/images/preference/3aIeR-bar-peepal-logo.png"
+            src={logoToRender}
             alt="Bar Peepal Resort Logo"
             className="w-20 h-20 md:w-40 md:h-40 object-contain drop-shadow-lg"
           />
@@ -152,7 +159,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between text-white p-4">
           <Link to="/">
             <img
-              src="https://www.barpeepalresort.com/images/preference/3aIeR-bar-peepal-logo.png"
+              src={logo}
               alt="Bar Peepal Resort Logo"
               className="w-28 h-20 lg:w-40 lg:h-24 object-contain drop-shadow-lg bg-white rounded-lg"
             />
