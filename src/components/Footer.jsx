@@ -186,7 +186,7 @@ const Footer = () => {
                     className="p-2 flex items-center justify-center bg-white rounded-xl"
                   >
                     <img
-                      src={`${import.meta.env.BASE_URL}${ota.image}`}
+                      src={ota.image}
                       className={`w-32 h-8 object-contain ${ota.customClass}`}
                       alt={ota.name}
                     />
@@ -204,7 +204,7 @@ const Footer = () => {
                   <li key={method.id}>
                     {/* <a href="#" target="_blank" rel="noopener noreferrer"> */}
                     <img
-                      src={`${import.meta.env.BASE_URL}${method.image}`}
+                      src={method.image}
                       className="w-12 h-auto object-contain"
                       alt={method.name}
                     />
