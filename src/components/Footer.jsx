@@ -33,12 +33,12 @@ const socialMediaDetails = [
   {
     id: 1,
     icon: <FaFacebook className="text-2xl" />,
-    link: "https://www.facebook.com",
+    link: "https://www.facebook.com/barpeepalresort2020/",
   },
   {
     id: 2,
     icon: <BsInstagram className="text-2xl" />,
-    link: "https://www.instagram.com",
+    link: "https://www.instagram.com/barpeepalresort/",
   },
   {
     id: 3,
@@ -49,7 +49,7 @@ const socialMediaDetails = [
         className="w-40 h-auto object-contain"
       />
     ),
-    link: "https://www.barpeepalresort.com",
+    link: "https://www.hotelpokhara.com/",
   },
 ];
 
@@ -140,7 +140,7 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-            <ul className="flex items-center justify-center gap-4 mt-5">
+            <ul className="flex items-center justify-center gap-4 mt-5 z-20">
               {socialMediaDetails.map((social) => (
                 <li key={social.id}>
                   <Link
@@ -222,11 +222,11 @@ const Footer = () => {
           <p className="text-center">
             Copyright © Bar Peepal Resort {currentYear}. All rights reserved.
           </p>
-          <div className="flex gap-4">
-            <Link to="/" className="underline">
+          <div className="flex gap-4 z-20">
+            <Link to="/" className="underline hover:no-underline">
               Terms & Conditions
             </Link>
-            <Link to="/" className="underline">
+            <Link to="/" className="underline hover:no-underline">
               Privacy Policy
             </Link>
           </div>
