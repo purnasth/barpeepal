@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { HiArrowLongRight } from "react-icons/hi2";
 
 import styled, { keyframes } from "styled-components";
+import HeadingStyle from "../HeadingStyle";
 
 const zoomIn = keyframes`
   0% {
@@ -72,9 +73,10 @@ const RoomSection = () => {
         <h2 className="font-bold text-center  text-dark-primary text-[2rem] md:text-[3rem]">
           Our Rooms
         </h2>
-        <p className="text-md lg:text-xl mb-12 text-center">
+        <p className="text-md lg:text-xl text-center">
           Unwind in opulent comfort and modern luxury
         </p>
+        <HeadingStyle />
         <Slider {...settings}>
           {rooms.map((room) => (
             <div

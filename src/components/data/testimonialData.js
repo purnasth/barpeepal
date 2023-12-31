@@ -1,38 +1,59 @@
 const testimonialData = [
   {
-    author: "John Doe",
-    avatar: "https://example.com/avatar1.jpg",
-    source: "via TripAdvisor",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quam ratione earum odit non quod eum at ullam, sapiente dolores repellat? Nam iure quo dignissimos repellat, officia dolorem molestias ipsa accusamus corporis repudiandae cumque velit soluta enim dolor laboriosam eum et libero odit maiores repellendus. Mollitia sint eos, soluta cupiditate aperiam dolore accusamus! Similique sapiente ipsam, vitae architecto explicabo autem in tempora, perferendis dolor vero nihil numquam quis debitis dicta tenetur aliquid, et assumenda? Aspernatur consectetur delectus porro? Distinctio, necessitatibus?  Similique sapiente ipsam, vitae architecto explicabo autem in tempora, perferendis dolor vero nihil numquam quis debitis dicta tenetur aliquid, et assumenda? Aspernatur consectetur delectus porro? Distinctio, necessitatibus?",
-  },
-  {
-    author: "Jane Smith",
-    avatar: "https://example.com/avatar2.jpg",
-    source: "via Google Reviews",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quam ratione earum odit non quod eum at ullam, sapiente dolores repellat? Nam iure quo dignissimos repellat, officia dolorem molestias ipsa accusamus corporis repudiandae cumque velit soluta enim dolor laboriosam eum et libero odit maiores repellendus. Mollitia sint eos, soluta cupiditate aperiam dolore accusamus! Similique sapiente ipsam, vitae architecto explicabo autem in tempora, perferendis dolor vero nihil numquam quis debitis dicta tenetur aliquid, et assumenda? Aspernatur consectetur delectus porro? Distinctio, necessitatibus?  Similique sapiente ipsam, vitae architecto explicabo autem in tempora, perferendis dolor vero nihil numquam quis debitis dicta tenetur aliquid, et assumenda? Aspernatur consectetur delectus porro? Distinctio, necessitatibus?",
-  },
-  {
-    author: "Alice Johnson",
-    avatar: "https://example.com/avatar3.jpg",
-    source: "via Yelp",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quam ratione earum odit non quod eum at ullam, sapiente dolores repellat? Nam iure quo dignissimos repellat, officia dolorem molestias ipsa accusamus corporis repudiandae cumque velit soluta enim dolor laboriosam eum et libero odit maiores repellendus. Mollitia sint eos, soluta cupiditate aperiam dolore accusamus! Similique sapiente ipsam, vitae architecto explicabo autem in tempora, perferendis dolor vero nihil numquam quis debitis dicta tenetur aliquid, et assumenda? Aspernatur consectetur delectus porro? Distinctio, necessitatibus?  Similique sapiente ipsam, vitae architecto explicabo autem in tempora, perferendis dolor vero nihil numquam quis debitis dicta tenetur aliquid, et assumenda? Aspernatur consectetur delectus porro? Distinctio, necessitatibus?",
-  },
-  {
-    author: "Bob Anderson",
-    avatar: "https://example.com/avatar4.jpg",
-    source: "via Facebook",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quam ratione earum odit non quod eum at ullam, sapiente dolores repellat? Nam iure quo dignissimos repellat, officia dolorem molestias ipsa accusamus corporis repudiandae cumque velit soluta enim dolor laboriosam eum et libero odit maiores repellendus. Mollitia sint eos, soluta cupiditate aperiam dolore accusamus! Similique sapiente ipsam, vitae architecto explicabo autem in tempora, perferendis dolor vero nihil numquam quis debitis dicta tenetur aliquid, et assumenda? Aspernatur consectetur delectus porro? Distinctio, necessitatibus?  Similique sapiente ipsam, vitae architecto explicabo autem in tempora, perferendis dolor vero nihil numquam quis debitis dicta tenetur aliquid, et assumenda? Aspernatur consectetur delectus porro? Distinctio, necessitatibus?",
-  },
-  {
-    author: "Eva Martinez",
-    avatar: "https://example.com/avatar5.jpg",
+    author: "Kristi",
+    avatar:
+      "https://xx.bstatic.com/xdata/images/xphoto/square64/212324589.jpg?k=88bd461dcc6eb533c36245ce1ceeefc1aac717c1d5ebf3ac85167796795f2897&amp;o=",
     source: "via Booking.com",
+    contentTitle: "Amazing hotel and lovely staff!",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic quam ratione earum odit non quod eum at ullam, sapiente dolores repellat? Nam iure quo dignissimos repellat, officia dolorem molestias ipsa accusamus corporis repudiandae cumque velit soluta enim dolor laboriosam eum et libero odit maiores repellendus. Mollitia sint eos, soluta cupiditate aperiam dolore accusamus! Similique sapiente ipsam, vitae architecto explicabo autem in tempora, perferendis dolor vero nihil numquam quis debitis dicta tenetur aliquid, et assumenda? Aspernatur consectetur delectus porro? Distinctio, necessitatibus?  Similique sapiente ipsam, vitae architecto explicabo autem in tempora, perferendis dolor vero nihil numquam quis debitis dicta tenetur aliquid, et assumenda? Aspernatur consectetur delectus porro? Distinctio, necessitatibus?",
+      "Our stay at Bar Peepal resort was amazing! The food is delicious, the rooms are spotless, the hotel is in a perfect location, quite close to the most popular areas and above all the staff was extremely welcoming and so professional! Also, the gym in the hotel is open and everything works fine. We felt so pampered and we will stay there again when we come back to Pokhara!",
+  },
+  {
+    author: "Eugene M",
+    avatar:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e9/ef/default-avatar-2020-66.jpg?w=100&h=-1&s=1",
+    source: "via Tripadvisor",
+    contentTitle: "Bar Peepal a home from home",
+    content:
+      "What a lovely and friendly group of people at the Bar Peepal hotel. Amazing spa and great team at the restaurant and in reception. This hotel is run extremely well and we felt welcome from the first to the last moment. We hope to return here again when we visit this wonderful place.",
+  },
+  {
+    author: "Calvin",
+    avatar:
+      "https://graph.facebook.com/v2.9/10154161400848055/picture?type=square&height=64&width=64",
+    source: "via Booking.com",
+    contentTitle: "Exceptional",
+    content:
+      "If you are traveling to Pokhara this is THE place to stay. It is centrally located, the breakfast is great, rooms are spacious and most importantly, the staff is really nice. The hotel also provides free airport pickup/drops and shuttle to the city (which is 5 min by walk)",
+  },
+  {
+    author: "Cathyhike",
+    avatar:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e5/2b/default-avatar-2020-52.jpg?w=100&h=-1&s=1",
+    source: "via Tripadvisor",
+    contentTitle:
+      "Excellent relaxing resort/hotel near Lakeside Pokhara, with excellent food and services.",
+    content:
+      "Excellent accommodations and service! The staff are very friendly, helpful and kind. Lakeside Pokhara is a 15 minute walk, although the hotel offers free rides to and from lakeside when a vehicle is available. The included breakfast buffet is delicious and plentiful, and includes an omelet station. Their coffee is excellent. The wait staff is attentive, efficient and kind. We also ate dinner at the hotel, and it was very good. The rooftop infinity pool/bar was clean and relaxing.",
+  },
+  {
+    author: "Gianluca",
+    avatar:
+      "https://graph.facebook.com/v2.9/10209511863165853/picture?type=square&height=64&width=64",
+    source: "via Booking.com",
+    contentTitle: "Good value for money.",
+    content:
+      "Top notch establishment not far from lakeside, with commanding views on the mountains and Phewa lake. The rooms are spacious and well appointed, and the rooftop pool is definitely a plus. The service is kind and attentive, and the travel desk is happy to assist with organising activities and excursions. Excellent breakfast. Good value for money.",
+  },
+  {
+    author: "jitka l",
+    avatar:
+      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/f6/e6/ea/default-avatar-2020-54.jpg?w=100&h=-1&s=1",
+    source: "via Tripadvisor",
+    contentTitle:
+      "10 stars!! Amazing staff, location, pool,spa. A truly relaxing resort.",
+    content:
+      "10 star property! Clean, comfortable rooms with gorgeous views of Pewa lake. Gorgeous Pool and garden. Lovely spa. Delicious breakfast buffet with made-to-order omelets. A relaxing and peaceful place which is a 15 minute walk to Lakeside shopping and tourist attractions. The wonderful hotel staff made this hotel truly exceptional. Their warmth, courtesy, and kindness were outstanding. They sent a shuttle to the airport to pick me up, drove me to a neighboring yoga class, and even got a surprise cake to celebrate my birthday since I was alone. A million thanks to a hotel that deserves to be a destination in itself!",
   },
 ];
 

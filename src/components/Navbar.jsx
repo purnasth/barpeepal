@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../public/logo.svg";
-import logoWhite from "../../public/logo_white.svg";
+import logo from "/logo.svg";
+import logoWhite from "/logo_white.svg";
 import { HiArrowLongRight } from "react-icons/hi2";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
@@ -66,23 +66,14 @@ const Navbar = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
-  const gradientStyle = {
-    // background:
-    // "radial-gradient(at center bottom, rgba(255,255,255,1), rgba(69, 71, 35, 1))",
-    // background: "rgba(0, 0, 0, 0.2)",
-    backdropFilter: "blur(4px)",
-  };
-
   return (
     <nav
       className={`fixed top-0 w-full transition-all z-50 bg-gradient-to-t from-[rgba(0,0,0,0)] via-[rgba(0,0,0,0.4)] to-[rgba(0,0,0,0.8)]`}
     >
       <div
         className={`flex items-center justify-between px-4 z-[99] transition-all duration-300 h-20 ${
-          isSticky ? "gradient-background" : "bg-transparent"
+          isSticky ? "backdrop-blur-sm" : "bg-transparent"
         }`}
-        style={isSticky ? gradientStyle : {}}
       >
         <div
           className={`flex items-center justify-center gap-1 lg:gap-2 text-white cursor-pointer transition-all duration-300 ${

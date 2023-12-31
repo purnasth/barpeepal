@@ -24,7 +24,7 @@ const AboutHome = () => {
               </p>
             </div>
             <div className="w-full md:w-1/2 text-base md:text-lg">
-              <p>
+              <p className="hidden md:block">
                 An Exclusive Resort surrounded in 10.5 ropani having 38 Rooms, 1
                 Restaurant, 1 Coffee Shop , Infinity Swimming Pool, Spa Sauna &
                 Steam and Big Garden. Resort represent Nepali Local house which

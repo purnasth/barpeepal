@@ -20,11 +20,11 @@
   }
 
   ::-webkit-scrollbar {
-    @apply w-2 bg-transparent;
+    @apply w-2 bg-transparent rounded-full;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-light-primary;
+    @apply bg-light-primary rounded-[100vw];
   }
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-gray-100;
