@@ -34,11 +34,13 @@ const socialMediaDetails = [
     id: 1,
     icon: <FaFacebook className="text-2xl" />,
     link: "https://www.facebook.com/barpeepalresort2020/",
+    label: "Visit our Facebook page",
   },
   {
     id: 2,
     icon: <BsInstagram className="text-2xl" />,
     link: "https://www.instagram.com/barpeepalresort/",
+    label: "Visit our Instagram page",
   },
   {
     id: 3,
@@ -50,6 +52,7 @@ const socialMediaDetails = [
       />
     ),
     link: "https://www.hotelpokhara.com/",
+    label: "Visit our Silver Oaks Inn website",
   },
 ];
 
@@ -147,6 +150,7 @@ const Footer = () => {
                     to={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={social.label}
                   >
                     {social.icon}
                   </Link>

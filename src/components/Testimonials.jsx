@@ -45,9 +45,9 @@ const Testimonials = () => {
         <h2 className="font-bold text-center  text-dark-primary text-[2rem] md:text-[3rem]">
           Testimonials
         </h2>
-        <p className="text-md lg:text-xl text-center text-dark-primary">
+        <h3 className="text-md lg:text-xl text-center text-dark-primary">
           See why they love their unforgettable stays with us!
-        </p>
+        </h3>
         <HeadingStyle />
         <Slider {...settings}>
           {testimonialData.map((testimonial, index) => (
@@ -63,9 +63,9 @@ const Testimonials = () => {
                   className="w-20 h-20 rounded-full shadow-lg object-cover"
                 />
                 <div className="flex items-start justify-center flex-col">
-                  <h5 className="text-base md:text-xl text-coffee-800 font-bold text-gray-100">
+                  <h4 className="text-base md:text-xl text-coffee-800 font-bold text-gray-100">
                     {testimonial.author}
-                  </h5>
+                  </h4>
                   <span className="text-sm italic text-gray-100/80">
                     {testimonial.source}
                   </span>

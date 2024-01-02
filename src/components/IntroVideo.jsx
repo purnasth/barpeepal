@@ -23,6 +23,7 @@ const IntroVideo = () => {
         poster=""
       >
         <source src={bgVideo} type="video/mp4" />
+        <track kind="captions" src="#" srcLang="en" label="English" />
         Your browser does not support the video tag.
       </video>
     </section>

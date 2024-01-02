@@ -100,11 +100,11 @@ const Navbar = () => {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
+                d="M4 6h8M4 12h16m-7 6h7"
               ></path>
             )}
           </svg>
-          <span className="text-white text-base opacity-0 lg:text-xl">
+          <span className="text-white text-base opacity-0 lg:opacity-100 lg:text-xl">
             Menu
           </span>
         </div>

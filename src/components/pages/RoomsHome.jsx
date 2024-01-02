@@ -88,6 +88,7 @@ const RoomSection = () => {
                   src={room.image}
                   alt={room.title}
                   className="w-full h-64 object-cover mb-4 rounded-lg"
+                  aria-hidden="true"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-30 hover:bg-opacity-0 rounded-lg transition duration-300 ease-in-out"></div>
               </div>
@@ -95,12 +96,15 @@ const RoomSection = () => {
                 <Link
                   to="/"
                   className="flex items-center justify-start text-xl md:text-2xl font-bold mb-2 text-white gap-2"
+                  aria-hidden="true"
                 >
-                  Explore
-                  <HiArrowLongRight />
-                  <h3 className="">{room.title}</h3>
+                  <span aria-hidden="true">Explore</span>
+                  <HiArrowLongRight aria-hidden="true" />
+                  <h3 aria-hidden="true">{room.title}</h3>
                 </Link>
-                <p className="text-gray-200">{room.description}</p>
+                <p aria-hidden="true" className="text-gray-200">
+                  {room.description}
+                </p>
               </div>
             </div>
           ))}
