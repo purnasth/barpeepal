@@ -1,6 +1,6 @@
 import React from "react";
 // import graphicsTree from "/src/assets/graphics/tree.png";
-import graphicsTree from "../../assets/graphics/tree.png";
+import graphicsTree from "../../assets/graphics/tree.webp";
 import { Link } from "react-router-dom";
 import { HiArrowLongRight } from "react-icons/hi2";
 

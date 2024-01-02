@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import spring from "../assets/graphics/spring_tree.png";
-import forest from "../assets/graphics/forest.png";
-import hills from "../assets/graphics/hills.png";
+import forest from "../assets/graphics/forest.webp";
+import longtail from "../assets/img/longtail_e-media.svg";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaPhoneAlt, FaFacebook, FaHeart } from "react-icons/fa";
 import { IoIosMailUnread } from "react-icons/io";
@@ -11,7 +10,7 @@ import { BsInstagram } from "react-icons/bs";
 const contactDetails = [
   {
     id: 1,
-    icon: <IoLocationSharp className="inline-block text-4xl -mr-5" />,
+    icon: <IoLocationSharp className="inline-block text-4xl lg:-mr-5" />,
     text: "Manimarg, Street No. 28, Lakeside, Pokhara-6, Nepal",
     link: "https://maps.app.goo.gl/R5pPb1zuN6NmuqeQ6",
   },
@@ -52,7 +51,7 @@ const socialMediaDetails = [
       />
     ),
     link: "https://www.hotelpokhara.com/",
-    label: "Visit our Silver Oaks Inn website",
+    label: "Visit our Sister Concern",
   },
 ];
 
@@ -101,34 +100,26 @@ const otaLinks = [
 ];
 
 const paymentMethods = [
-  { id: 1, name: "Visa", image: "src/assets/visa/visa.png" },
-  { id: 2, name: "MasterCard", image: "src/assets/visa/mastercard.png" },
-  { id: 3, name: "American Express", image: "src/assets/visa/amex.png" },
-  { id: 4, name: "Union", image: "src/assets/visa/union.png" },
+  { id: 1, name: "Visa", image: "src/assets/visa/visa.webp" },
+  { id: 2, name: "MasterCard", image: "src/assets/visa/mastercard.webp" },
+  { id: 3, name: "American Express", image: "src/assets/visa/amex.webp" },
+  { id: 4, name: "Union", image: "src/assets/visa/union.webp" },
 ];
 
 const currentYear = new Date().getFullYear();
 
 const Footer = () => {
-  const springTreeStyle = {
-    backgroundImage: `url(${spring})`,
-  };
-
   const forestTreeStyle = {
     backgroundImage: `url(${forest})`,
-  };
-
-  const hillsTreeStyle = {
-    backgroundImage: `url(${hills})`,
   };
 
   return (
     <footer className="bg-dark-primary text-white relative overflow-hidden z-10 p-4">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 justify-items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 justify-items-center">
           <div className="grid justify-items-center w-full">
             <h5 className="text-2xl mb-8 underline">Contact Details</h5>
-            <ul className="text-xl flex items-center justify-center flex-col gap-4">
+            <ul className="text-lg md:text-xl flex items-center justify-center flex-col gap-4">
               {contactDetails.map((contact) => (
                 <li key={contact.id}>
                   <Link
@@ -169,10 +160,10 @@ const Footer = () => {
               rel="noopener noreferrer"
             >
               <img
-                src="https://longtail.info/n/wp-content/uploads/2015/11/lgo.png"
-                alt="logo"
+                src={longtail}
+                alt="Longtail e-media, Partner in Promotion"
                 data-size="medium"
-                className="w-48 h-auto object-contain"
+                className="w-48 h-auto object-contain mix-blend-hard-light bg-white p-2 rounded-xl my-2"
               />
             </Link>
           </div>
@@ -199,7 +190,7 @@ const Footer = () => {
               ))}
             </ul>
 
-            <div className="flex items-center justify-between gap-4 mt-5 md:mt-0">
+            <div className="flex items-center justify-between gap-4 mt-5 lg:mt-0">
               <h5 className="text-xs md:text-base uppercase font-bold">
                 We accept
               </h5>
@@ -237,19 +228,10 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* <div
-        className="absolute bottom-0 left-0 w-full h-96 bg-cover bg-center bg-no-repeat opacity-20"
-        style={hillsTreeStyle}
-      ></div> */}
       <div
         className="absolute bottom-0 left-0 w-full h-40 bg-contain bg-repeat-x opacity-10"
         style={forestTreeStyle}
       ></div>
-
-      {/* <div
-        className="absolute -bottom-10 right-1/2 translate-x-1/2 w-80 h-96 bg-contain bg-no-repeat opacity-20"
-        style={springTreeStyle}
-      ></div> */}
     </footer>
   );
 };

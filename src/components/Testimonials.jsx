@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import testimonialData from "./data/testimonialData";
 import "slick-carousel/slick/slick.css";
@@ -62,14 +63,19 @@ const Testimonials = () => {
                   alt={testimonial.author}
                   className="w-20 h-20 rounded-full shadow-lg object-cover"
                 />
-                <div className="flex items-start justify-center flex-col">
+                <Link
+                  to={testimonial.sourceUrl}
+                  target="_blank"
+                  className="flex items-start justify-center flex-col"
+                  rel="noreferrer"
+                >
                   <h4 className="text-base md:text-xl text-coffee-800 font-bold text-gray-100">
                     {testimonial.author}
                   </h4>
                   <span className="text-sm italic text-gray-100/80">
                     {testimonial.source}
                   </span>
-                </div>
+                </Link>
               </div>
               <h5 className="text-gray-200 text-xl font-bold mt-4">
                 {testimonial.contentTitle}

@@ -9,7 +9,7 @@ const navigationItems = [
   { label: "Home", link: "/home" },
   { label: "About Us", link: "/about" },
   {
-    label: "Rooms",
+    label: "Rooms & Suites",
     subItems: [
       { label: "Deluxe Room", link: "/rooms/deluxe" },
       { label: "Super Deluxe Room", link: "/rooms/super-deluxe" },
@@ -17,8 +17,8 @@ const navigationItems = [
     ],
   },
   { label: "Restaurant & Bar", link: "/restaurant-bar" },
-  { label: "Services", link: "/services" },
   { label: "Meeting & Events", link: "/events" },
+  { label: "Facilities", link: "/services" },
   { label: "Recreation", link: "/recreation" },
   { label: "Gallery", link: "/gallery" },
   { label: "Contact Us", link: "/contact" },
@@ -176,7 +176,7 @@ const Navbar = () => {
             <li key={index}>
               {item.subItems ? (
                 <div
-                  className={`flex items-center justify-between text-white px-4 py-3 my-2 text-base md:text-lg transition-all duration-300 cursor-pointer hover:bg-white hover:text-dark-primary rounded-xl ${
+                  className={`flex items-center justify-between text-white px-4 py-3 my-2 text-base md:text-lg transition-all duration-300 cursor-pointer hover:bg-white hover:text-dark-primary rounded-xl [word-spacing:5px] ${
                     isActive(item.link)
                       ? "bg-white text-dark-primary rounded-xl"
                       : ""
@@ -193,7 +193,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   to={item.link}
-                  className={`block px-4 py-3 my-2 text-base md:text-lg transition-all duration-200 hover:bg-white hover:text-dark-primary rounded-xl  ${
+                  className={`block px-4 py-3 my-2 text-base md:text-lg transition-all duration-200 hover:bg-white hover:text-dark-primary rounded-xl [word-spacing:5px] ${
                     isActive(item.link)
                       ? "bg-white text-dark-primary rounded-xl"
                       : "text-white"

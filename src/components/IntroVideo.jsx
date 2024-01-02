@@ -1,29 +1,28 @@
-import React from "react";
-import bgVideo from "../assets/video/video.mp4";
+import React, { useRef } from "react";
+import bgVideo from "../assets/video/Bar_Peepal_Resort_Exclusive_Resort_Best_Lake_View_Resort_Resort_Promo_Video.mp4";
 
 const IntroVideo = () => {
+  const videoRef = useRef(null);
+
   function startVideo() {
-    var backgroundVideo = document.getElementById("backgroundVideo");
-    backgroundVideo.play();
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
   }
 
   return (
-    <section
-      className="w-full h-full lg:h-[100vh] overflow-hidden"
-      onClick={startVideo}
-    >
+    <section className="relative w-full h-full lg:h-screen overflow-hidden">
       <video
-        width="100%"
-        height="100%"
+        ref={videoRef}
+        className="w-full h-full object-cover"
         autoPlay
         loop
         muted
         playsInline
-        id="backgroundVideo"
         poster=""
+        onClick={startVideo}
       >
         <source src={bgVideo} type="video/mp4" />
-        <track kind="captions" src="#" srcLang="en" label="English" />
         Your browser does not support the video tag.
       </video>
     </section>
