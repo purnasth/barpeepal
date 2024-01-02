@@ -7,6 +7,20 @@ import { FaPhoneAlt, FaFacebook, FaHeart } from "react-icons/fa";
 import { IoIosMailUnread } from "react-icons/io";
 import { BsInstagram } from "react-icons/bs";
 
+// ota links
+import bookingcom from "../assets/OTA/bookingcom.svg";
+import tripadvisor from "../assets/OTA/tripadvisor.svg";
+import makemytrip from "../assets/OTA/makemytrip.svg";
+import agoda from "../assets/OTA/agoda.svg";
+import expedia from "../assets/OTA/expedia.svg";
+import trivago from "../assets/OTA/trivago.svg";
+
+// visa
+import visa from "../assets/visa/visa.webp";
+import mastercard from "../assets/visa/mastercard.webp";
+import amex from "../assets/visa/amex.webp";
+import union from "../assets/visa/union.webp";
+
 const contactDetails = [
   {
     id: 1,
@@ -59,26 +73,26 @@ const otaLinks = [
   {
     id: 1,
     name: "Booking.com",
-    image: "src/assets/OTA/bookingcom.svg",
+    image: bookingcom,
     link: "https://www.booking.com/hotel/np/bar-peepal-resort.en-gb.html",
   },
   {
     id: 2,
     name: "Tripadvisor",
-    image: "src/assets/OTA/tripadvisor.svg",
+    image: tripadvisor,
     link: "https://www.tripadvisor.com/Hotel_Review-g293891-d21025792-Reviews-Bar_Peepal_Resort-Pokhara_Gandaki_Zone_Western_Region.html",
   },
   {
     id: 3,
     name: "MakeMyTrip",
-    image: "src/assets/OTA/makemytrip.svg",
+    image: makemytrip,
     link: "https://www.makemytrip.com/hotels-international/nepal/pokhara-hotels/bar_peepal_resort-details.html",
   },
 
   {
     id: 4,
     name: "Agoda",
-    image: "src/assets/OTA/agoda.svg",
+    image: agoda,
     link: "https://www.agoda.com/bar-peepal-resort/hotel/pokhara-np.html",
     customClass: "w-32 h-8 object-cover scale-75 md:scale-75",
   },
@@ -86,7 +100,7 @@ const otaLinks = [
   {
     id: 5,
     name: "Expedia",
-    image: "src/assets/OTA/expedia.svg",
+    image: expedia,
     link: "https://www.expedia.com/Pokhara-Hotels-Bar-Peepal-Resort.h66466180.Hotel-Information",
     customClass: "object-cover",
   },
@@ -94,16 +108,16 @@ const otaLinks = [
   {
     id: 6,
     name: "Trivago",
-    image: "src/assets/OTA/trivago.svg",
+    image: trivago,
     link: "https://www.trivago.com/pokhara-101736/hotel/bar-peepal-resort-10325146",
   },
 ];
 
 const paymentMethods = [
-  { id: 1, name: "Visa", image: "src/assets/visa/visa.webp" },
-  { id: 2, name: "MasterCard", image: "src/assets/visa/mastercard.webp" },
-  { id: 3, name: "American Express", image: "src/assets/visa/amex.webp" },
-  { id: 4, name: "Union", image: "src/assets/visa/union.webp" },
+  { id: 1, name: "Visa", image: visa },
+  { id: 2, name: "MasterCard", image: mastercard },
+  { id: 3, name: "American Express", image: amex },
+  { id: 4, name: "Union", image: union },
 ];
 
 const currentYear = new Date().getFullYear();
