@@ -21,7 +21,7 @@ const zoomIn = keyframes`
 `;
 
 const AnimatedImg = styled.img`
-  animation: ${zoomIn} 15s linear infinite;
+  animation: ${zoomIn} 60s linear infinite;
 `;
 
 const rooms = [
