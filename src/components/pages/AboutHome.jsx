@@ -34,7 +34,7 @@ const AboutHome = () => {
               </p>
               <Link
                 to={`/about`}
-                className="w-48 px-4 md:px-6 py-2 bg-dark-primary my-3 flex items-center justify-center cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#454722] before:to-[#696935] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] hover:before:left-0 text-[#fff] text-xl lg:text-lg"
+                className="w-60 pr-4 hover:px-4 md:pr-6 hover:md:px-6 py-2 bg-none my-3 flex items-center justify-start cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#454722] before:to-[#696935] before:transition-all before:duration-500 before:ease-in-out before:z-[-1] hover:before:left-0 text-black hover:text-peepal-300 text-xl lg:text-2xl"
               >
                 Explore More
                 <HiArrowLongRight className="ml-2 text-2xl" />

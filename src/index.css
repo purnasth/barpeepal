@@ -12,11 +12,11 @@
 
 @layer components {
   ::selection {
-    @apply bg-light-primary text-gray-100;
+    @apply bg-peepal-800 text-peepal-300;
   }
 
   ::-moz-selection {
-    @apply bg-light-primary text-gray-100;
+    @apply bg-peepal-800 text-peepal-300;
   }
 
   ::-webkit-scrollbar {
@@ -24,28 +24,28 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-light-primary rounded-[100vw];
+    @apply bg-peepal-800 rounded-[100vw];
   }
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-100;
+    @apply bg-peepal-900;
   }
 
   ::-webkit-scrollbar-track {
     @apply bg-transparent;
   }
 
-  .scroller::-webkit-scrollbar {
+  /* .scroller::-webkit-scrollbar {
     @apply w-2 bg-transparent;
   }
   .scroller::-webkit-scrollbar-thumb {
-    @apply w-2 bg-gray-100;
+    @apply w-2 bg-red-600;
   }
   .scroller::-webkit-scrollbar-thumb:hover {
-    @apply w-2 bg-light-primary;
-  }
+    @apply w-2 bg-peepal-300;
+  } */
 
   body {
-    @apply bg-gray-100 text-gray-900 font-roxborough;
+    @apply bg-peepal-300 text-gray-800 font-roxborough;
   }
   /* .overlay {
     @apply bg-gradient-to-t from-[rgba(0,0,0,0)] via-[rgba(0,0,0,0.6)] to-[rgba(0,0,0,0.8)] absolute inset-0 w-full h-1/2 lg:h-screen;

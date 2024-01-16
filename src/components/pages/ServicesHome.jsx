@@ -117,10 +117,10 @@ const ServicesHome = () => {
 
   return (
     <>
-      <div className="bg-dark-primary">
+      <div className="bg-peepal-800">
         <div className="flex flex-col lg:flex-row">
           {/* Left Section with Small Sections */}
-          <div className="sticky top-5 w-full lg:w-1/4 h-screen overflow-y-auto bg-dark-primary px-4 text-white-primary transition-all duration-300 ease-in-out">
+          <div className="sticky top-5 w-full lg:w-1/4 h-screen overflow-y-auto bg-peepal-800 px-4 text-peepal-300 transition-all duration-300 ease-in-out">
             <h2 className="mt-16 font-bold text-[2rem] md:text-[3rem]">
               Our Services
             </h2>
@@ -138,8 +138,8 @@ const ServicesHome = () => {
                     onClick={() => handleNavClick(index)}
                     className={`text-lg font-semibold ${
                       activeService === index
-                        ? "bg-white-primary text-dark-primary"
-                        : "hover:bg-white-primary hover:text-dark-primary"
+                        ? "bg-peepal-300 text-peepal-800"
+                        : "hover:bg-peepal-300 hover:text-peepal-800"
                     } w-full py-4 px-4 rounded-xl flex items-center transition-all duration-300 ease-in-out`}
                   >
                     {React.createElement(icons[index], {
@@ -153,7 +153,7 @@ const ServicesHome = () => {
             </ul>
           </div>
 
-          <div className="w-full lg:w-3/4 overflow-y-auto z-20 bg-dark-primary">
+          <div className="w-full lg:w-3/4 overflow-y-auto z-20 bg-gradient-to-b from-peepal-800 via-peepal-700 to-peepal-800">
             {services.map((service, index) => (
               <div
                 id={service.title.toLowerCase().replace(/\s/g, "-")}
@@ -168,7 +168,7 @@ const ServicesHome = () => {
                     className="mb-4 rounded-2xl"
                   />
                 </div>
-                <div className="bg-white-primary w-[300px] lg:w-3/5 p-4 rounded-2xl -translate-y-20 transition-all duration-300 ease-in-out">
+                <div className="bg-peepal-300 w-[300px] lg:w-3/5 p-4 rounded-2xl -translate-y-20 transition-all duration-300 ease-in-out">
                   <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                   <p>{service.description}</p>
                 </div>

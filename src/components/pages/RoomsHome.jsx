@@ -68,9 +68,9 @@ const RoomSection = () => {
   };
 
   return (
-    <section className="p-4 bg-gradient-to-b from-gray-100 via-[#696935] to-[#454722]">
+    <section className="p-4 bg-gradient-to-b from-peepal-300 via-peepal-600 to-peepal-800">
       <div className="container mx-auto">
-        <h2 className="font-bold text-center  text-dark-primary text-[2rem] md:text-[3rem]">
+        <h2 className="font-bold text-center text-gray-800 text-[2rem] md:text-[3rem]">
           Our Rooms
         </h2>
         <p className="text-md lg:text-xl text-center">
@@ -95,14 +95,14 @@ const RoomSection = () => {
               <div className="ml-2 mt-4">
                 <Link
                   to="/"
-                  className="flex items-center justify-start text-xl md:text-2xl font-bold mb-2 text-white gap-2"
+                  className="flex items-center justify-start text-xl md:text-2xl font-bold mb-2 text-peepal-300 gap-2"
                   aria-hidden="true"
                 >
                   <span aria-hidden="true">Explore</span>
                   <HiArrowLongRight aria-hidden="true" />
                   <h3 aria-hidden="true">{room.title}</h3>
                 </Link>
-                <p aria-hidden="true" className="text-gray-200">
+                <p aria-hidden="true" className="text-peepal-400">
                   {room.description}
                 </p>
               </div>

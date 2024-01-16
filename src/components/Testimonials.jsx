@@ -41,7 +41,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section className="relative p-4 z-20 overflow-hidden bg-gradient-to-b from-gray-100 via-[#696935] to-[#454722]">
+    <section className="relative p-4 z-20 overflow-hidden bg-gradient-to-b from-peepal-800 via-peepal-600 to-peepal-300">
       <div className="container mx-auto md:p-20">
         <h2 className="font-bold text-center  text-dark-primary text-[2rem] md:text-[3rem]">
           Testimonials
@@ -57,7 +57,7 @@ const Testimonials = () => {
               className="flex items-center gap-8 relative p-8 my-8 shadow-lg hover:shadow-xl transition-all duration-150 ease-linear max-h-80 overflow-y-auto cursor-pointer bg-dark-primary/80"
               onDoubleClick={() => openModal(testimonial)}
             >
-              <div className="w-full flex items-center justify-between text-gray-100">
+              <div className="w-full flex items-center justify-between text-gray-800">
                 <img
                   src={testimonial.avatar}
                   alt={testimonial.author}
@@ -69,7 +69,7 @@ const Testimonials = () => {
                   className="flex items-start justify-center flex-col"
                   rel="noreferrer"
                 >
-                  <h4 className="text-base md:text-xl text-coffee-800 font-bold text-gray-100">
+                  <h4 className="text-base md:text-xl text-coffee-800 font-bold text-gray-800">
                     {testimonial.author}
                   </h4>
                   <span className="text-sm italic text-gray-100/80">
@@ -77,10 +77,10 @@ const Testimonials = () => {
                   </span>
                 </Link>
               </div>
-              <h5 className="text-gray-200 text-xl font-bold mt-4">
+              <h5 className="text-gray-800 text-xl font-bold mt-4">
                 {testimonial.contentTitle}
               </h5>
-              <p className="text-justify text-gray-200 text-sm md:text-base my-2">
+              <p className="text-justify text-gray-800 text-sm md:text-base my-2">
                 {testimonial.content}
               </p>
             </div>

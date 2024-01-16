@@ -128,7 +128,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-dark-primary text-white relative overflow-hidden z-10 p-4">
+    <footer className="bg-gradient-to-t from-peepal-800 via-peepal-700 to-peepal-300 text-black relative overflow-hidden z-10 p-4">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 justify-items-center">
           <div className="grid justify-items-center w-full">
@@ -166,7 +166,8 @@ const Footer = () => {
 
           <div className="flex items-center justify-center flex-col z-20">
             <h5 className="flex items-center justify-center gap-2 text-xl lg:text-2xl z-20 text-center">
-              Developed with <FaHeart className="animate-bounce text-4xl" /> by
+              Developed with{" "}
+              <FaHeart className="animate-bounce text-4xl text-peepal-300" /> by
             </h5>
             <Link
               to="https://longtail.info"
@@ -227,9 +228,9 @@ const Footer = () => {
 
         <div className="line border-[0.5px] border-dotted border-white mt-4"></div>
 
-        <div className="flex items-center justify-center lg:justify-between flex-col lg:flex-row gap-4 mt-4 text-base">
+        <div className="flex items-center justify-center lg:justify-between flex-col lg:flex-row gap-4 mt-4 text-base font-semibold">
           <p className="text-center">
-            Copyright © Bar Peepal Resort {currentYear}. All rights reserved.
+            © Bar Peepal Resort {currentYear}. All rights reserved.
           </p>
           <div className="flex gap-4 z-20">
             <Link to="/" className="underline hover:no-underline">
