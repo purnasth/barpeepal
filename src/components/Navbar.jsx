@@ -76,7 +76,7 @@ const Navbar = () => {
         }`}
       >
         <div
-          className={`flex items-center justify-center gap-1 lg:gap-2 text-white cursor-pointer transition-all duration-300 ${
+          className={`flex items-center justify-center gap-1 lg:gap-2 text-peepal-300 cursor-pointer transition-all duration-300 ${
             isSticky ? "scale-90" : ""
           }`}
           onClick={toggleNav}
@@ -104,14 +104,14 @@ const Navbar = () => {
               ></path>
             )}
           </svg>
-          <span className="text-white text-base opacity-0 lg:opacity-100 lg:text-xl">
+          <span className="text-peepal-300 text-base opacity-0 lg:opacity-100 lg:text-xl">
             Menu
           </span>
         </div>
 
         <Link
           to="/"
-          className={`text-white font-bold transition-all duration-300 ${
+          className={`text-peepal-300 font-bold transition-all duration-300 ${
             isSticky ? "scale-100 md:scale-[0.65]" : "bg-transparent mt-10"
           }`}
           style={{
@@ -145,14 +145,14 @@ const Navbar = () => {
       <div
         className={`fixed top-0 left-0 w-3/4 lg:w-1/4 h-full transition-all ${
           isNavOpen ? "translate-x-0" : "-translate-x-full"
-        } duration-300 ease-in-out bg-light-primary z-[99] list-none overflow-y-auto`}
+        } duration-300 ease-in-out bg-peepal-900 z-[99] list-none overflow-y-auto`}
       >
-        <div className="flex items-center justify-between text-white p-4">
+        <div className="flex items-center justify-between text-peepal-300 p-4">
           <Link to="/">
             <img
               src={logo}
               alt="Bar Peepal Resort Logo"
-              className="w-28 h-20 lg:w-40 lg:h-24 object-contain drop-shadow-lg bg-white rounded-lg"
+              className="w-28 h-20 lg:w-40 lg:h-24 object-contain drop-shadow-lg bg-peepal-300 rounded-lg"
             />
           </Link>
           <svg
@@ -176,9 +176,9 @@ const Navbar = () => {
             <li key={index}>
               {item.subItems ? (
                 <div
-                  className={`flex items-center justify-between text-white px-4 py-3 my-2 text-base md:text-lg transition-all duration-300 cursor-pointer hover:bg-white hover:text-dark-primary rounded-xl [word-spacing:5px] ${
+                  className={`flex items-center justify-between text-peepal-300 px-4 py-3 my-2 text-base md:text-lg transition-all duration-300 cursor-pointer hover:bg-peepal-300 hover:text-peepal-800 rounded-xl [word-spacing:5px] ${
                     isActive(item.link)
-                      ? "bg-white text-dark-primary rounded-xl"
+                      ? "bg-peepal-300 text-peepal-800 rounded-xl"
                       : ""
                   }`}
                   onClick={toggleRooms}
@@ -193,10 +193,10 @@ const Navbar = () => {
               ) : (
                 <Link
                   to={item.link}
-                  className={`block px-4 py-3 my-2 text-base md:text-lg transition-all duration-200 hover:bg-white hover:text-dark-primary rounded-xl [word-spacing:5px] ${
+                  className={`block px-4 py-3 my-2 text-base md:text-lg transition-all duration-200 hover:bg-peepal-300 hover:text-peepal-800 rounded-xl [word-spacing:5px] ${
                     isActive(item.link)
-                      ? "bg-white text-dark-primary rounded-xl"
-                      : "text-white"
+                      ? "bg-peepal-300 text-peepal-800 rounded-xl"
+                      : "text-peepal-300"
                   }`}
                   onClick={() => {
                     closeNav();
@@ -208,7 +208,7 @@ const Navbar = () => {
               )}
               {item.subItems && isRoomsOpen && (
                 <ul
-                  className={`ml-2 text-white block px-4 py-0 my-2 ${
+                  className={`ml-2 text-peepal-300 block px-4 py-0 my-2 ${
                     isRoomsOpen ? "-translate-y-0" : "-translate-y-full"
                   }`}
                 >
@@ -216,10 +216,10 @@ const Navbar = () => {
                     <li key={subIndex}>
                       <Link
                         to={subItem.link}
-                        className={`block px-4 py-3 my-1 text-base md:text-lg hover:bg-white hover:text-dark-primary rounded-xl ${
+                        className={`block px-4 py-3 my-1 text-base md:text-lg hover:bg-peepal-300 hover:text-peepal-800 rounded-xl ${
                           isActive(subItem.link)
-                            ? "bg-white text-dark-primary rounded-xl"
-                            : "text-white"
+                            ? "bg-peepal-300 text-peepal-800 rounded-xl"
+                            : "text-peepal-300"
                         }`}
                         onClick={() => {
                           closeNav();
