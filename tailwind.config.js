@@ -6,7 +6,7 @@ export default {
         // !
         // "dark-primary": "#454722",
         // "light-primary": "#696935",
-        // "white-primary": "#eef2b3",
+        "white-primary": "#eef2b3",
         // !
         // "white-primary": "#FFEED2",
         // "light-primary-ALT": "#9D9C63",

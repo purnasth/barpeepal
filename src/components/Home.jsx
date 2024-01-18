@@ -7,6 +7,7 @@ import Testimonials from "./Testimonials";
 import Footer from "./Footer";
 import WhatsApp from "./WhatsApp";
 import Messenger from "./Messenger";
+import ParallaxExample from "./ParallaxExample";
 
 const Home = () => {
   const [showIcons, setShowIcons] = useState(false);

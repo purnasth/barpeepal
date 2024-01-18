@@ -44,6 +44,10 @@
     @apply w-2 bg-peepal-300;
   } */
 
+  html {
+    @apply max-w-[100vw] overflow-x-hidden;
+  }
+
   body {
     @apply bg-peepal-300 text-gray-800 font-roxborough;
   }

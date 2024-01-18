@@ -47,7 +47,7 @@ const Testimonials = () => {
           Testimonials
         </h2>
         <h3 className="text-md lg:text-xl text-center text-dark-primary">
-          See why they love their unforgettable stays with us!
+          Our Commitment to Customer Satisfaction and Guest Experience
         </h3>
         <HeadingStyle />
         <Slider {...settings}>

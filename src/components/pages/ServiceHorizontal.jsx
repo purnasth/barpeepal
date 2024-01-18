@@ -125,10 +125,9 @@ const ServicesHome = () => {
               Our Services
             </h2>
             <p className="text-base lg:text-lg">
-              Bar Peepal Resort offers a serene escape with a pool, spa,
-              restaurant, bar, and event halls - your perfect blend of
-              relaxation and celebration in one luxurious destination. Immerse
-              yourself in the ultimate experience of comfort and indulgence.
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui vel
+              minus aut temporibus deleniti impedit magnam suscipit at rem,
+              aperiam esse. Deserunt libero blanditiis fugiat rerum?
             </p>
 
             <ul className="my-8">
@@ -154,27 +153,29 @@ const ServicesHome = () => {
             </ul>
           </div>
 
-          <div className="w-full lg:w-3/4 overflow-y-auto z-20 bg-gradient-to-b from-peepal-800 via-peepal-700 to-peepal-800">
-            {services.map((service, index) => (
-              <div
-                id={service.title.toLowerCase().replace(/\s/g, "-")}
-                className="service-section flex items-center justify-center flex-col px-4 pt-16 my-4"
-                key={service.id}
-                ref={serviceRefs.current[index]}
-              >
-                <div className="overflow-hidden rounded-xl mt-8">
-                  <AnimatedImg
-                    src={service.image}
-                    alt={service.title}
-                    className="mb-4 rounded-2xl"
-                  />
+          {/* <div className="w-full lg:w-3/4 overflow-x-auto overflow-y-hidden z-20 bg-gradient-to-b from-peepal-800 via-peepal-700 to-peepal-800"> */}
+          <div className="w-full lg:w-3/4 overflow-x-hidden overflow-y-hidden z-20">
+            <div className="flex items-center">
+              {services.map((service, index) => (
+                <div
+                  key={service.id}
+                  className="flex items-center justify-center flex-col flex-shrink-0 w-full lg:w-full mx-2 overflow-hidden rounded-xl transition-all duration-300 ease-in-out"
+                  ref={serviceRefs.current[index]}
+                >
+                  <div className="overflow-hidden rounded-xl mt-20">
+                    <AnimatedImg
+                      src={service.image}
+                      alt={service.title}
+                      className="mb-4 rounded-2xl "
+                    />
+                  </div>
+                  <div className="bg-peepal-300 w-[300px] lg:w-3/5 rounded-2xl -translate-y-20 transition-all duration-300 ease-in-out p-8">
+                    <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                    <p>{service.description}</p>
+                  </div>
                 </div>
-                <div className="bg-peepal-300 w-[300px] lg:w-3/5 rounded-2xl -translate-y-20 transition-all duration-300 ease-in-out p-8">
-                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
-                  <p>{service.description}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

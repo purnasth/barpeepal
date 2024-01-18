@@ -22,9 +22,14 @@ const navigationItems = [
   { label: "Recreation", link: "/recreation" },
   { label: "Gallery", link: "/gallery" },
   { label: "Contact Us", link: "/contact" },
+  {
+    label: "Book Now",
+    link: "book", // Add your desired link
+    isButton: true,
+    className: `w-full px-4 md:px-6 py-3 bg-white rounded-xl my-3 flex items-center justify-center cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out hover:scale-100 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-peepal-900 before:to-peepal-800 before:transition-all before:duration-500 before:ease-in-out before:z-[-1]  hover:before:left-0 text-peepal-900 hover:text-peepal-300 text-xl lg:text-lg lg:hidden`,
+  },
 ];
 
-// Helper function to check if a given link is active
 const isActive = (link) => {
   return location.pathname.includes(link);
 };
@@ -172,68 +177,81 @@ const Navbar = () => {
           </svg>
         </div>
         <ul className="px-4">
-          {navigationItems.map((item, index) => (
-            <li key={index}>
-              {item.subItems ? (
-                <div
-                  className={`flex items-center justify-between text-peepal-300 px-4 py-3 my-2 text-base md:text-lg transition-all duration-300 cursor-pointer hover:bg-peepal-300 hover:text-peepal-800 rounded-xl [word-spacing:5px] ${
-                    isActive(item.link)
-                      ? "bg-peepal-300 text-peepal-800 rounded-xl"
-                      : ""
-                  }`}
-                  onClick={toggleRooms}
-                >
-                  {item.label}
-                  <IoMdArrowDropdown
-                    className={`inline-block ml-2 text-2xl transform ${
-                      isRoomsOpen ? "rotate-180" : ""
-                    }`}
-                  />
-                </div>
-              ) : (
+
+{navigationItems.map((item, index) => (
+  <li key={index}>
+    {item.isButton ? (
+      <button
+        className={`${
+          item.className
+        } px-4 md:px-6 py-2 bg-transparent my-3 flex items-center justify-center cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out hover:scale-100 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-[#454722] before:to-[#696935] before:transition-all before:duration-500 before:ease-in-out before:z-[-1]  hover:before:left-0 text-[#fff] text-xl lg:text-lg ${
+          isSticky ? "scale-90 hidden md:flex" : ""
+        }`}
+      >
+        {item.label}
+        {item.isButton && (
+          <HiArrowLongRight className="text-2xl ml-2 hidden lg:block" />
+        )}
+      </button>
+    ) : (
+      <>
+        {item.subItems ? (
+          <div
+            className={`flex items-center justify-between text-peepal-300 px-4 py-3 my-2 text-base md:text-lg transition-all duration-300 cursor-pointer hover:bg-peepal-300 hover:text-peepal-800 rounded-xl [word-spacing:5px] ${
+              isActive(item.link) ? "bg-peepal-300 text-peepal-800 rounded-xl" : ""
+            }`}
+            onClick={toggleRooms}
+          >
+            {item.label}
+            <IoMdArrowDropdown
+              className={`inline-block ml-2 text-2xl transform ${
+                isRoomsOpen ? "rotate-180" : ""
+              }`}
+            />
+          </div>
+        ) : (
+          <Link
+            to={item.link}
+            className={`block px-4 py-3 my-2 text-base md:text-lg transition-all duration-200 hover:bg-peepal-300 hover:text-peepal-800 rounded-xl [word-spacing:5px] ${
+              isActive(item.link) ? "bg-peepal-300 text-peepal-800 rounded-xl" : "text-peepal-300"
+            }`}
+            onClick={() => {
+              closeNav();
+              closeRooms(); // Close the rooms dropdown when a link is clicked
+            }}
+          >
+            {item.label}
+          </Link>
+        )}
+        {item.subItems && isRoomsOpen && (
+          <ul
+            className={`ml-2 text-peepal-300 block px-4 py-0 my-2 ${
+              isRoomsOpen ? "-translate-y-0" : "-translate-y-full"
+            }`}
+          >
+            {item.subItems.map((subItem, subIndex) => (
+              <li key={subIndex}>
                 <Link
-                  to={item.link}
-                  className={`block px-4 py-3 my-2 text-base md:text-lg transition-all duration-200 hover:bg-peepal-300 hover:text-peepal-800 rounded-xl [word-spacing:5px] ${
-                    isActive(item.link)
-                      ? "bg-peepal-300 text-peepal-800 rounded-xl"
-                      : "text-peepal-300"
+                  to={subItem.link}
+                  className={`block px-4 py-3 my-1 text-base md:text-lg hover:bg-peepal-300 hover:text-peepal-800 rounded-xl ${
+                    isActive(subItem.link) ? "bg-peepal-300 text-peepal-800 rounded-xl" : "text-peepal-300"
                   }`}
                   onClick={() => {
                     closeNav();
                     closeRooms(); // Close the rooms dropdown when a link is clicked
                   }}
                 >
-                  {item.label}
+                  {subItem.label}
                 </Link>
-              )}
-              {item.subItems && isRoomsOpen && (
-                <ul
-                  className={`ml-2 text-peepal-300 block px-4 py-0 my-2 ${
-                    isRoomsOpen ? "-translate-y-0" : "-translate-y-full"
-                  }`}
-                >
-                  {item.subItems.map((subItem, subIndex) => (
-                    <li key={subIndex}>
-                      <Link
-                        to={subItem.link}
-                        className={`block px-4 py-3 my-1 text-base md:text-lg hover:bg-peepal-300 hover:text-peepal-800 rounded-xl ${
-                          isActive(subItem.link)
-                            ? "bg-peepal-300 text-peepal-800 rounded-xl"
-                            : "text-peepal-300"
-                        }`}
-                        onClick={() => {
-                          closeNav();
-                          closeRooms(); // Close the rooms dropdown when a link is clicked
-                        }}
-                      >
-                        {subItem.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
+              </li>
+            ))}
+          </ul>
+        )}
+      </>
+    )}
+  </li>
+))}
+
         </ul>
       </div>
     </nav>
